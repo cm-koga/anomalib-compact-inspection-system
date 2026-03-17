@@ -1,0 +1,4 @@
+anomalib==2.2.0
+pygame
+requests
+

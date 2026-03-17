@@ -1,0 +1,2 @@
+cfg = None
+logger = None

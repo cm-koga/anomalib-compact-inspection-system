@@ -1,0 +1,29 @@
+title: Anomalib compact inspection system
+
+ui:
+  window_size: [1024, 600]
+  camlive_size: [640, 480]
+  bg_color: [255, 255, 255]
+
+camera:
+  id: 0
+
+inspection:
+  judge_th: 0.5
+
+model:
+  ckpt_path: "models/model.ckpt"
+  cfg_path: "models/config.yaml"
+  gpu: False
+
+visualize:
+  cut_th: 0.5
+  normalize: True
+
+save_image:
+  enable: True
+  normal_image_save_path: "save_images/normal"
+  abnormal_image_save_path: "save_images/abnormal"
+
+log:
+  level: info
