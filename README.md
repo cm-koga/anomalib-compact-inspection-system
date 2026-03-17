@@ -1,0 +1,2 @@
+# anomalib-compact-inspection-system
+Anomalibで生成した異常モデルをつかった簡易外観検査ソフト
