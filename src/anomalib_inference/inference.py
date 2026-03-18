@@ -17,7 +17,7 @@ class AnomalibInference:
 
         cfg = OmegaConf.load(cfg_path)
         self.model = get_model(cfg.model)
-        ckpt = torch.load(ckpt_path, map_location=self.device)
+        ckpt = torch.load(ckpt_path, map_location=self.device, weights_only=False)
         self.model.load_state_dict(ckpt["state_dict"], strict=False)
         self.model.to(self.device)
 
