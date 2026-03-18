@@ -47,7 +47,7 @@ def overlay(im_base, im_overlay, alpha=0.5, mask=None):
     
     return im_overlay
 
-def generate_mask(anomaly_map, threshold, kernel_size=4):
+def generate_mask(anomaly_map, threshold=0.5, kernel_size=4):
     anomaly_map = anomaly_map.squeeze()
     mask = np.zeros_like(anomaly_map, dtype=np.uint8)
     mask[anomaly_map > threshold] = 255
@@ -63,7 +63,7 @@ def generate_mask(anomaly_map, threshold, kernel_size=4):
 def overlay_mask_edge(
         im_base,
         anomaly_map,
-        threshold,
+        threshold=0.5,
         kernel_size=4,
         color=(0, 0, 255),
         backcolor=None,
